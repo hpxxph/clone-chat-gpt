@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body>
+    <img src="" alt="">
+    <div class="chat-container"></div>
+    <div class="typing-container">
+      <div class="typing-content">
+        <div class="typing-textarea">
+          <textarea id="chat-input" spellcheck="false" placeholder="Enter a msg here" required></textarea>
+          <span id="send-btn" class="material-symbols-rounded">send</span>
+        </div>
+        <div class="typing-controls">
+          <span id="microphoneBtn"><img src="public/images/bx-microphone.svg"></span>          
+          <span id="theme-btn"><img src="public/images/bx-color.svg"></span>
+          <span id="delete-btn"><img src="public/images/bxs-message-square-minus.svg"></span>
+      </div>
+    </div>
+    <script type="module" src="modules/chat.js"></script>
+    <script type="module" src="modules/theme.js"></script>
+    <script type="module" src="modules/delete.js"></script>
+  <script src="JS/script.js" defer></script>
+  <script src="JS/voice.js"></script> 
+  <script src="JS/theme.js"></script>
+   </body>
+</html> 
