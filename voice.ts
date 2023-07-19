@@ -50,3 +50,4 @@ microphoneBtn.addEventListener("click", () => {
     input.value = result;
   };
 });
+
