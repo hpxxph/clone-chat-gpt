@@ -44,9 +44,9 @@ let userText = null;
  * Ключ API OpenAI.
  * @type {string}
  */
-const API_KEY = "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";
+const API_KEY = "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";
 
-/**
+/*`
  * Загрузка данных из локального хранилища.
  * Инициализация темы и чата.
  */
@@ -179,16 +179,6 @@ const handleOutgoingChat = () => {
   chatContainer.scrollTo(0, chatContainer.scrollHeight);
   setTimeout(showTypingAnimation, 500);
 };
-
-/**
- * Обработчик клика на кнопку удаления сообщений.
- */
-deleteButton.addEventListener("click", () => {
-  if (confirm("Are you sure you want to delete all the chats?")) {
-    localStorage.removeItem("all-chats");
-    loadDataFromLocalStorage();
-  }
-});
 
 /**
  * Обработчик клика на кнопку переключения темы.
