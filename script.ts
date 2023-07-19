@@ -44,7 +44,7 @@ let userText = null;
  * Ключ API OpenAI.
  * @type {string}
  */
-const API_KEY = "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";
+const API_KEY = "YOUR API";
 
 /*`
  * Загрузка данных из локального хранилища.

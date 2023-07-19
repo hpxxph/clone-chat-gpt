@@ -5,7 +5,7 @@ const themeButton = document.querySelector("#theme-btn");
 const deleteButton = document.querySelector("#delete-btn");
 const userImgLink = 'public/images/user.png';
 let userText = null;
-const API_KEY = "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";
+const API_KEY = "YOUR API";
 const loadDataFromLocalStorage = () => {
     const themeColor = localStorage.getItem("themeColor");
     document.body.classList.toggle("light-mode", themeColor === "light_mode");
