@@ -1,0 +1,99 @@
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #6b94f4; 
+    color: white;
+  }
+  
+  .modal-body {padding: 2px 16px;}
+  
+  .modal-footer {
+    height: 50px;
+    padding: 2px 16px;
+    background-color: #6b94f4; 
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  #btn-modal-delete {
+    height: 30px;
+    width: 60px;
+    border: 1px solid #4538ef;
+   transition-duration:  0.4s; 
+  }
+  
+  #btn-modal-delete:hover {
+    color: #4538ef;
+    background-color: #5e6d8f;
+    cursor: pointer;
+  }
+  
+  #btn-modal-delete:active{
+  transform: scale(0.95);
+  }
+  
+  #btn-modal-close {
+    height: 30px;
+    width: 60px;
+    border-radius: 3px;
+    border: 1px solid #4538ef;
+    transition-duration: 0.4s;
+  }
+  #btn-modal-close:hover {
+    color: #4538ef;
+    background-color: #5e6d8f;
+    cursor: pointer;
+  }
+  
+  #btn-modal-close:active{
+    transform: scale(0.95);
+    }
+  
+  .modal-content {
+    position: relative;
+    top: 50%;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;  
+  }
+  
+  @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 50%; opacity: 1}
+  }
+  
+  .close-modal{
+    animation-name:  animateHide;
+  -webkit-animation-name: animateHide;
+  -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+  }
+  
+  @keyframes animateHide {
+    from{top: 50%; opacity: 1}
+    to {top : -300px; opacity: 0}
+    
+  }
+  @-webkit-keyframes animateHide{
+    from{top: 50%; opacity: 1}
+    to {top : -300px; opacity: 0}
+  }
