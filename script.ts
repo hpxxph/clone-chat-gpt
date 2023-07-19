@@ -180,15 +180,15 @@ const handleOutgoingChat = () => {
   setTimeout(showTypingAnimation, 500);
 };
 
-/**
- * Обработчик клика на кнопку удаления сообщений.
- */
-deleteButton.addEventListener("click", () => {
-  if (confirm("Are you sure you want to delete all the chats?")) {
-    localStorage.removeItem("all-chats");
-    loadDataFromLocalStorage();
-  }
-});
+// /**
+//  * Обработчик клика на кнопку удаления сообщений.
+//  */
+// deleteButton.addEventListener("click", () => {
+//   if (confirm("Are you sure you want to delete all the chats?")) {
+//     localStorage.removeItem("all-chats");
+//     loadDataFromLocalStorage();
+//   }
+// });
 
 /**
  * Обработчик клика на кнопку переключения темы.

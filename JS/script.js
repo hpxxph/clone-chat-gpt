@@ -96,12 +96,12 @@ const handleOutgoingChat = () => {
     chatContainer.scrollTo(0, chatContainer.scrollHeight);
     setTimeout(showTypingAnimation, 500);
 };
-deleteButton.addEventListener("click", () => {
-    if (confirm("Are you sure you want to delete all the chats?")) {
-        localStorage.removeItem("all-chats");
-        loadDataFromLocalStorage();
-    }
-});
+// deleteButton.addEventListener("click", () => {
+//     if (confirm("Are you sure you want to delete all the chats?")) {
+//         localStorage.removeItem("all-chats");
+//         loadDataFromLocalStorage();
+//     }
+// });
 themeButton.addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
     localStorage.setItem("themeColor", themeButton.innerText);
