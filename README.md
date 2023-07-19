@@ -4,13 +4,17 @@ https://github.com/hpxxxhp/clone-chat-gpt/assets/92604077/ca38961b-8590-4b5e-a7f
 
 first install these packages 
 <br>
+<br>
 `npm install openai` 
 openai
+<br>
 <br>
 `npm install electron`
 electron 
 <br>
+<br>
 `npm install electronmon`
 electronmon
+<br>
 <br>
 
