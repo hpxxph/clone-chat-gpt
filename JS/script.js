@@ -5,7 +5,7 @@ const themeButton = document.querySelector("#theme-btn");
 const deleteButton = document.querySelector("#delete-btn");
 const userImgLink = 'public/images/user.png';
 let userText = null;
-const API_KEY = "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";
+const API_KEY = "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";
 const loadDataFromLocalStorage = () => {
     const themeColor = localStorage.getItem("themeColor");
     document.body.classList.toggle("light-mode", themeColor === "light_mode");
@@ -96,12 +96,6 @@ const handleOutgoingChat = () => {
     chatContainer.scrollTo(0, chatContainer.scrollHeight);
     setTimeout(showTypingAnimation, 500);
 };
-deleteButton.addEventListener("click", () => {
-    if (confirm("Are you sure you want to delete all the chats?")) {
-        localStorage.removeItem("all-chats");
-        loadDataFromLocalStorage();
-    }
-});
 themeButton.addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
     localStorage.setItem("themeColor", themeButton.innerText);
