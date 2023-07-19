@@ -25,4 +25,4 @@ for start
 - what kind of project? => this is an analogue of chatGpt only designed for the desktop
 - what is the difference ? => added voice assistant & can switch between two themes
 - what was used? => html, css (scss), JavaScript, TypeScript, Jest, Electron, JsDoc
--deleting a chat requires a third part with installation rights
+- deleting a chat requires a third part with installation rights
