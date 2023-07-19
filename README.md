@@ -18,3 +18,5 @@ electronmon
 <br>
 <br>
 
+- what kind of project? => this is an analogue of chatGpt only designed for the desktop
+- what is the difference ? => added voice assistant & can switch between two themes
