@@ -1,49 +1,23 @@
-/**
- * Поле ввода чата.
- * @type {HTMLInputElement}
- */
+
 const chatInput = document.querySelector<HTMLInputElement>("#chat-input");
 
-/**
- * Кнопка отправки сообщения.
- * @type {HTMLButtonElement}
- */
+
 const sendButton = document.querySelector<HTMLButtonElement>("#send-btn");
 
-/**
- * Контейнер чата.
- * @type {HTMLDivElement}
- */
+
 const chatContainer = document.querySelector<HTMLDivElement>(".chat-container");
 
-/**
- * Кнопка переключения темы.
- * @type {HTMLButtonElement}
- */
+
 const themeButton = document.querySelector<HTMLButtonElement>("#theme-btn");
 
-/**
- * Кнопка удаления всех сообщений в чате.
- * @type {HTMLButtonElement}
- */
+
 const deleteButton = document.querySelector<HTMLButtonElement>("#delete-btn");
 
-/**
- * Ссылка на изображение пользователя.
- * @type {string}
- */
 const userImgLink = 'public/images/user.png';
 
-/**
- * Текст пользователя.
- * @type {string | null}
- */
 let userText = null;
 
-/**
- * Ключ API OpenAI.
- * @type {string}
- */
+
 const API_KEY = "YOUR API";
 
 /*`
@@ -70,12 +44,7 @@ const loadDataFromLocalStorage = () => {
   chatContainer.scrollTo(0, chatContainer.scrollHeight);
 };
 
-/**
- * Создает элемент чата.
- * @param {string} content - Содержимое элемента чата.
- * @param {string} className - Класс элемента чата.
- * @returns {HTMLDivElement} - Элемент чата.
- */
+
 const createChatElement = (content, className) => {
   const chatDiv = document.createElement("div");
   chatDiv.classList.add("chat", className);
@@ -83,10 +52,7 @@ const createChatElement = (content, className) => {
   return chatDiv;
 };
 
-/**
- * Получает ответ чата с помощью API OpenAI.
- * @param {HTMLDivElement} incomingChatDiv - Входящий элемент чата.
- */
+
 const getChatResponse = async (incomingChatDiv) => {
   const API_URL = "https://api.openai.com/v1/completions";
   const pElement = document.createElement("p");
@@ -135,9 +101,7 @@ const copyResponse = (copyBtn) => {
   }
 };
 
-/**
- * Показывает анимацию набора сообщения.
- */
+
 const showTypingAnimation = () => {
   const html = `<div class="chat-content">
                     <div class="chat-details">
@@ -156,9 +120,7 @@ const showTypingAnimation = () => {
   getChatResponse(incomingChatDiv);
 };
 
-/**
- * Обрабатывает отправку исходящего сообщения.
- */
+
 const handleOutgoingChat = () => {
   userText = chatInput.value.trim();
   if (!userText) return;
@@ -180,32 +142,22 @@ const handleOutgoingChat = () => {
   setTimeout(showTypingAnimation, 500);
 };
 
-/**
- * Обработчик клика на кнопку переключения темы.
- */
+
 themeButton.addEventListener("click", () => {
   document.body.classList.toggle("light-mode");
   localStorage.setItem("themeColor", themeButton.innerText);
 });
 
-/**
- * Высота поля ввода чата при инициализации.
- * @type {number}
- */
+
 const initialInputHeight = chatInput.scrollHeight;
 
-/**
- * Обновляет высоту поля ввода чата при изменении его содержимого.
- */
+
 chatInput.addEventListener("input", () => {
   chatInput.style.height = `${initialInputHeight}px`;
   chatInput.style.height = `${chatInput.scrollHeight}px`;
 });
 
-/**
- * Обрабатывает нажатие клавиши "Enter" для отправки исходящего сообщения (только если ширина окна больше 800px).
- * @param {KeyboardEvent} e - Событие клавиатуры.
- */
+
 chatInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
     e.preventDefault();

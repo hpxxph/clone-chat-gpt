@@ -1,4 +1,32 @@
-'use strict';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: script.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: script.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict';
 
 /**
  * Поле ввода чата.
@@ -70,9 +98,9 @@ const API_KEY = "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";
 const loadDataFromLocalStorage = () => {
     const themeColor = localStorage.getItem("themeColor");
     document.body.classList.toggle("light-mode", themeColor === "light_mode");
-    const defaultText = `<div class="default-text">
-                            <h1>ChatGPT</h1>
-                        </div>`;
+    const defaultText = `&lt;div class="default-text">
+                            &lt;h1>ChatGPT&lt;/h1>
+                        &lt;/div>`;
     chatContainer.innerHTML = localStorage.getItem("all-chats") || defaultText;
     chatContainer.scrollTo(0, chatContainer.scrollHeight);
 };
@@ -139,17 +167,17 @@ const copyResponse = (copyBtn) => {
  * Показывает анимацию набора сообщения.
  */
 const showTypingAnimation = () => {
-    const html = `<div class="chat-content">
-                    <div class="chat-details">
-                        <img src="public/images/chatbot.jpg" alt="chatbot-img">
-                        <div class="typing-animation">
-                            <div class="typing-dot" style="--delay: 0.2s"></div>
-                            <div class="typing-dot" style="--delay: 0.3s"></div>
-                            <div class="typing-dot" style="--delay: 0.4s"></div>
-                        </div>
-                    </div>
-                    <span onclick="copyResponse(this)" class="material-symbols-rounded">content_copy</span>
-                </div>`;
+    const html = `&lt;div class="chat-content">
+                    &lt;div class="chat-details">
+                        &lt;img src="public/images/chatbot.jpg" alt="chatbot-img">
+                        &lt;div class="typing-animation">
+                            &lt;div class="typing-dot" style="--delay: 0.2s">&lt;/div>
+                            &lt;div class="typing-dot" style="--delay: 0.3s">&lt;/div>
+                            &lt;div class="typing-dot" style="--delay: 0.4s">&lt;/div>
+                        &lt;/div>
+                    &lt;/div>
+                    &lt;span onclick="copyResponse(this)" class="material-symbols-rounded">content_copy&lt;/span>
+                &lt;/div>`;
     const incomingChatDiv = createChatElement(html, "incoming");
     chatContainer.appendChild(incomingChatDiv);
     chatContainer.scrollTo(0, chatContainer.scrollHeight);
@@ -165,12 +193,12 @@ const handleOutgoingChat = () => {
         return;
     chatInput.value = "";
     chatInput.style.height = `${initialInputHeight}px`;
-    const html = `<div class="chat-content">
-                    <div class="chat-details">
-                        <img src="${userImgLink}" alt="">
-                        <p>${userText}</p>
-                    </div>
-                </div>`;
+    const html = `&lt;div class="chat-content">
+                    &lt;div class="chat-details">
+                        &lt;img src="${userImgLink}" alt="">
+                        &lt;p>${userText}&lt;/p>
+                    &lt;/div>
+                &lt;/div>`;
     const outgoingChatDiv = createChatElement(html, "outgoing");
     chatContainer.querySelector(".default-text")?.remove();
     chatContainer.appendChild(outgoingChatDiv);
@@ -211,10 +239,33 @@ chatInput.addEventListener("input", () => {
  * @event module: handle event "keydown"
  */
 chatInput.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
+    if (e.key === "Enter" &amp;&amp; !e.shiftKey &amp;&amp; window.innerWidth > 800) {
         e.preventDefault();
         handleOutgoingChat();
     }
 });
 loadDataFromLocalStorage();
 sendButton.addEventListener("click", handleOutgoingChat);
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Events</h3><ul><li><a href="module-%2520handle%2520event%2520_click_.html"> handle event "click"</a></li><li><a href="module-%2520handle%2520event%2520_input_.html"> handle event "input"</a></li><li><a href="module-%2520handle%2520event%2520_keydown_.html"> handle event "keydown"</a></li></ul><h3>Global</h3><ul><li><a href="global.html#API_KEY">API_KEY</a></li><li><a href="global.html#chatContainer">chatContainer</a></li><li><a href="global.html#chatInput">chatInput</a></li><li><a href="global.html#createChatElement">createChatElement</a></li><li><a href="global.html#deleteButton">deleteButton</a></li><li><a href="global.html#getChatResponse">getChatResponse</a></li><li><a href="global.html#handleOutgoingChat">handleOutgoingChat</a></li><li><a href="global.html#initialInputHeight">initialInputHeight</a></li><li><a href="global.html#loadDataFromLocalStorage">loadDataFromLocalStorage</a></li><li><a href="global.html#sendButton">sendButton</a></li><li><a href="global.html#showTypingAnimation">showTypingAnimation</a></li><li><a href="global.html#themeButton">themeButton</a></li><li><a href="global.html#userImgLink">userImgLink</a></li><li><a href="global.html#userText">userText</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Thu Jul 20 2023 16:58:26 GMT+0300 (Москва, стандартное время)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

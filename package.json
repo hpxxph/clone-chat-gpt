@@ -1,23 +1,27 @@
 {
   "name": "chatgpt-clone-project-javascript",
   "version": "1.0.0",
-  "main": "no.js",
+  "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "dev": "electron .",
-    "test": "jest"
+    "start": "electron .",
+    "dev": "electronmon .",
+    "test": "jest",
+    "build": "electron-builder"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "electron": "^25.3.0",
     "jest": "^29.6.1",
     "openai": "^3.3.0"
   },
   "devDependencies": {
+    "electron": "^25.3.1",
+    "electron-builder": "^24.4.0",
+    "electronmon": "^2.0.2",
+    "jest-environment-jsdom": "^29.6.1",
     "jsdom": "^22.1.0"
   }
 }
-
