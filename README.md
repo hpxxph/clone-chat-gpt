@@ -1,8 +1,5 @@
 # clone-chat-gpt
-
-![CHAT_GPT](https://github.com/hpxxxhp/clone-chat-gpt/assets/92604077/cbe259e9-9600-450b-9c05-74323d49e276)
-
-download these packages to get started
+## download these packages to get started
 <br>
 <br>
 `npm install openai` 
@@ -31,3 +28,6 @@ for start
 - **What technologies were used?**: The project was built using HTML, CSS (SCSS), JavaScript, TypeScript, Jest, Electron, and JsDoc.
 
 - **Note**: Deleting a chat requires third-party integration with installation rights.
+
+- ![CHAT_GPT](https://github.com/hpxxxhp/clone-chat-gpt/assets/92604077/cbe259e9-9600-450b-9c05-74323d49e276)
+
