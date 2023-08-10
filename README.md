@@ -22,8 +22,12 @@ for start
 <br>
 <br>
 
-Project Overview
-What kind of project?: This project is an analogue of ChatGPT, specifically designed for desktop use.
-What's the difference?: In addition to the capabilities of ChatGPT, this application includes a voice assistant and the ability to switch between two themes.
-What technologies were used?: The project was built using HTML, CSS (SCSS), JavaScript, TypeScript, Jest, Electron, and JsDoc.
-Note: Deleting a chat requires third-party integration with installation rights.
+## Project Overview
+
+- **What kind of project?**: This project is an analogue of ChatGPT, specifically designed for desktop use.
+
+- **What's the difference?**: In addition to the capabilities of ChatGPT, this application includes a voice assistant and the ability to switch between two themes.
+
+- **What technologies were used?**: The project was built using HTML, CSS (SCSS), JavaScript, TypeScript, Jest, Electron, and JsDoc.
+
+- **Note**: Deleting a chat requires third-party integration with installation rights.
