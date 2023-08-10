@@ -1,5 +1,5 @@
 # clone-chat-gpt
-## download these packages to get started
+for download
 <br>
 <br>
 `npm install openai` 
